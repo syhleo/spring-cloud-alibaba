@@ -16,7 +16,6 @@
 
 package com.alibaba.cloud.nacos.parser;
 
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockedStatic;
@@ -28,15 +27,20 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.mockStatic;
+import static org.mockito.Mockito.when;
 
 /**
  * NacosDataParserHandlerTest.
  *
  * @author songyanhui
  */
-class NacosDataParserHandlerTest {
+public class NacosDataParserHandlerTest {
 
     private NacosDataParserHandler nacosDataParserHandler;
 
