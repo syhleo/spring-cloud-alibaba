@@ -70,9 +70,9 @@ public class NacosDataParserHandlerTest {
         when(mockLoader.load(anyString(), any())).thenReturn(Collections.singletonList(mock(PropertySource.class)));
 
         // Mock the SpringFactoriesLoader to return our mocked loader
-        try (MockedStatic< SpringFactoriesLoader > mocked = mockStatic(SpringFactoriesLoader.class)) {
+        try (MockedStatic<SpringFactoriesLoader> mocked = mockStatic(SpringFactoriesLoader.class)) {
             mocked.when(() -> SpringFactoriesLoader.loadFactories(PropertySourceLoader.class, getClass().getClassLoader()))
-                  .thenReturn(Collections.singletonList(mockLoader));
+                    .thenReturn(Collections.singletonList(mockLoader));
 
             List<PropertySource<?>> propertySources = nacosDataParserHandler.parseNacosData(configName, configValue, extension);
 
@@ -90,9 +90,9 @@ public class NacosDataParserHandlerTest {
         when(mockLoader.load(anyString(), any())).thenReturn(Collections.singletonList(mock(PropertySource.class)));
 
         // Mock the SpringFactoriesLoader to return our mocked loader
-        try (MockedStatic< SpringFactoriesLoader > mocked = mockStatic(SpringFactoriesLoader.class)) {
+        try (MockedStatic<SpringFactoriesLoader> mocked = mockStatic(SpringFactoriesLoader.class)) {
             mocked.when(() -> SpringFactoriesLoader.loadFactories(PropertySourceLoader.class, getClass().getClassLoader()))
-                  .thenReturn(Collections.singletonList(mockLoader));
+                    .thenReturn(Collections.singletonList(mockLoader));
 
             List<PropertySource<?>> propertySources = nacosDataParserHandler.parseNacosData(configName, configValue, extension);
 
@@ -110,9 +110,9 @@ public class NacosDataParserHandlerTest {
         when(mockLoader.load(anyString(), any())).thenReturn(Collections.singletonList(mock(PropertySource.class)));
 
         // Mock the SpringFactoriesLoader to return our mocked loader
-        try (MockedStatic< SpringFactoriesLoader > mocked = mockStatic(SpringFactoriesLoader.class)) {
+        try (MockedStatic<SpringFactoriesLoader> mocked = mockStatic(SpringFactoriesLoader.class)) {
             mocked.when(() -> SpringFactoriesLoader.loadFactories(PropertySourceLoader.class, getClass().getClassLoader()))
-                  .thenReturn(Collections.singletonList(mockLoader));
+                    .thenReturn(Collections.singletonList(mockLoader));
 
             List<PropertySource<?>> propertySources = nacosDataParserHandler.parseNacosData(configName, configValue, extension);
 
